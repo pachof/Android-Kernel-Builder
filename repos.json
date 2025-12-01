@@ -1,29 +1,27 @@
 [  {
     "kernelSource": {
-      "name": "miku-KernelSU",
-      "repo": "https://github.com/PhamtomK12/kernel_xiaomi_odin",
-      "branch": "TDA",
-      "device": "odin"
+      "name": "huawei-frl",
+      "repo": "https://github.com/pachof/android_kernel_huawei_franklin.git",
+      "branch": "main",
+      "device": "frl-l23"
     },
     "withKernelSU": true,
     "toolchains": [
       {
-        "repo": "https://android.googlesource.com/platform/prebuilts/gas/linux-x86",
+        "repo": "https://github.com/KudProject/aarch64-linux-android-4.9",
         "branch": "master",
-        "name": "gas"
+        "name": "gcc"
       },
       {
         "repo": "https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone/",
-        "branch": "11",
+        "branch": "10",
         "name": "clang"
       }
     ],
     "params": {
       "ARCH": "arm64",
-      "CROSS_COMPILE": "aarch64-linux-gnu-",
-      "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
-      "CROSS_COMPILE_COMPAT": "arm-linux-gnueabi-",
-      "CLANG_TRIPLE": "aarch64-linux-gnu-",
+      "CROSS_COMPILE": "aarch64-linux-android-4.9",
+      "CLANG_TRIPLE": "aarch64-linux-android-4.9",
       "AR": "",
       "CC": "clang"
     }
